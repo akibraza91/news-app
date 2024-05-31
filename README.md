@@ -25,10 +25,12 @@ Users should be able to:
 
 ![](./design/desktop-design.jpg)
 
+
 ### Links
 
-- Solution URL: [Goto](https://your-solution-url.com)
-- Live Site URL: [Visit](https://your-live-site-url.com)
+- Solution URL: [Goto](https://www.frontendmentor.io/solutions/responsive-news-homepage-build-with-nextjs-beVgOVwsuR)
+- Live Site URL: [Visit](https://akibraza91.github.io/news-app/)
+
 
 ## My process
 
@@ -41,6 +43,7 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 
+
 ## Author
 
-- Frontend Mentor - [@akibraza91](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@akibraza91](https://www.frontendmentor.io/profile/akibraza91)
