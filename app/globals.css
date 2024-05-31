@@ -1,0 +1,388 @@
+:root {
+  --softOrange: hsl(35, 77%, 62%);
+  --softRed: hsl(5, 85%, 63%);
+
+  --offWhite: hsl(36, 100%, 99%);
+  --grayishBlue: hsl(233, 8%, 79%);
+  --darkGrayishBlue: hsl(236, 13%, 42%);
+  --veryDarkBlue: hsl(240, 100%, 5%);
+
+  --paraSize: 15px;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 2rem;
+}
+
+body {
+  background-color: var(--offWhite);
+}
+header
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .links
+{
+  display: flex;
+  gap: 2em;
+}
+header nav .links a
+{
+  text-decoration: none;
+  color: var(--darkGrayishBlue);
+  font-weight: 500;
+  cursor: pointer;
+}
+header nav .links a:hover
+{
+  color: var(--softOrange);
+}
+.container
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 2em;
+}
+.container .left-container
+{
+  position: relative;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container .left-container picture
+{
+  position: relative;
+  width: 100%;
+}
+.container .left-container picture img
+{
+  width: 100%;
+}
+.container .left-container .bottom
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 5em;
+}
+.container .left-container .bottom .left
+{
+  position: relative;
+  width: 100%;
+}
+.container .left-container .bottom .left h1
+{
+  font-size: 3.5em;
+  font-weight: 800;
+  color: var(--veryDarkBlue);
+}
+.container .left-container .bottom .right
+{
+  position: relative;
+  width: 100%;
+}
+.container .left-container .bottom .right p
+{
+  font-size: var(--paraSize);
+  color: var(--darkGrayishBlue);
+  line-height: 2;
+}
+.container .left-container .bottom .right button
+{
+  position: absolute;
+  bottom: 0;
+  padding: 0.8em 1.5em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: var(--softRed);
+  color: var(--veryDarkBlue);
+  border: none;
+  cursor: pointer;
+}
+.container .left-container .bottom .right button:hover
+{
+  background-color: var(--veryDarkBlue);
+  color: var(--offWhite);
+}
+.container .right-container
+{
+  position: relative;
+  width: 30%;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--veryDarkBlue);
+}
+.container .right-container h1
+{
+  color: var(--softOrange);
+  margin-bottom: 1em;
+}
+.container .right-container h3
+{
+  color: var(--offWhite);
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.container .right-container h3:hover
+{
+  color: var(--softOrange);
+}
+.container .right-container p
+{
+  color: var(--darkGrayishBlue);
+  font-size: var(--paraSize);
+  font-weight: 500;
+  line-height: 1.7;
+}
+.container .right-container > div:nth-child(1),
+.container .right-container > div:nth-child(2)
+{
+  border-bottom: 1px solid var(--darkGrayishBlue);
+  padding-bottom: 2em;
+}
+.bottom-container
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  margin-top: 3rem;
+}
+.bottom-container .card
+{
+  position: relative;
+  width: calc(100% / 3);
+  display: flex;
+  gap: 1.5em;
+}
+.bottom-container .card .imgBox
+{
+  position: relative;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom-container .card .right
+{
+  position: relative;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.bottom-container .card img
+{
+  width: 100%;
+  height: 100%;
+}
+.bottom-container .card .right h1
+{
+  color: var(--softRed);
+}
+.bottom-container .card .right h4
+{
+  color: var(--veryDarkBlue);
+  font-weight: 800;
+  cursor: pointer;
+}
+.bottom-container .card .right h4:hover
+{
+  color: var(--softRed);
+}
+.bottom-container .card .right p
+{
+  font-size: var(--paraSize);
+  color: var(--darkGrayishBlue);
+}
+header nav .menuIcon
+{
+  display: none;
+}
+header nav.open
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: var(--offWhite);
+}
+header nav.open .links
+{
+  display: block;
+}
+.overlay
+{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+.overlay.open {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*-----Media Queries-----*/
+@media (max-width: 768px){
+  html,
+  body
+  {
+    padding: 0;
+  }
+  header
+  {
+    padding: 1em 1em 0 1em;
+  }
+  header nav .links
+  {
+    display: none;
+  }
+  header nav .menuIcon
+  {
+    display: block;
+  }
+  header nav.open
+  {
+    padding: 2em;
+    z-index: 1000;
+  }
+  header nav.open .menuIcon
+  {
+    text-align: right;
+  }
+  header nav.open .links
+  {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    font-size: 1.2em;
+  }
+  header nav.open .links a
+  {
+    color: var(--veryDarkBlue);
+    
+  }
+  header nav.open .links a:hover
+  {
+    color: var(--softOrange);
+  }
+  header nav.open body
+  {
+    background-color: #000;
+  }
+  main .container
+  {
+    flex-direction: column;
+    padding: 0 1em;
+  }
+  main .container .left-container
+  {
+    position: relative;
+    width: 100%;
+  }
+  main .container .left-container .bottom
+  {
+    flex-direction: column;
+    gap: 1em;
+  }
+  main .container .left-container .bottom .right button
+  {
+    position: relative;
+    margin-top: 2em;
+  }
+  main .container .right-container
+  {
+    position: relative;
+    width: 100%;
+  }
+  main .container .right-container
+  {
+    gap: 2em;
+  }
+  .bottom-container
+  {
+    flex-direction: column;
+    padding: 0 1em 2em 1em;
+    gap: 1.5em;
+    margin-top: 2em;
+  }
+  .bottom-container .card
+  {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px){
+  html,
+  body
+  {
+    padding: 1.5em;
+  }
+  .container
+  {
+    flex-direction: column;
+  }
+  .container .left-container
+  {
+    position: relative;
+    width: 100%;
+    gap: 1em;
+  }
+  .container .left-container .bottom
+  {
+    gap: 1.5em;
+    height: fit-content;
+  }
+  .container .right-container
+  {
+    position: relative;
+    width: 100%;
+    gap: 2.5em;
+  }
+  .container .right-container h1
+  {
+    margin-bottom: 2em;
+  }
+  .bottom-container
+  {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .bottom-container .card
+  {
+    position: relative;
+    width: 100%;
+  }
+  .bottom-container .card .imgBox
+  {
+    width: fit-content;
+    height: 200px;
+  }
+}
