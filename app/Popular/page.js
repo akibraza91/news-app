@@ -6,7 +6,7 @@ const page = () => {
   return (
     <>
       <Header />
-      <div className='container'>
+      <div className='popular-container'>
         <h1>Popular Page</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
