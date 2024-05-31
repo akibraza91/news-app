@@ -216,6 +216,15 @@ header nav .links a:hover
   font-size: var(--paraSize);
   color: var(--darkGrayishBlue);
 }
+.attribution
+{
+  margin-top: 5em;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  font-size: var(--paraSize);
+}
 header nav .menuIcon
 {
   display: none;
